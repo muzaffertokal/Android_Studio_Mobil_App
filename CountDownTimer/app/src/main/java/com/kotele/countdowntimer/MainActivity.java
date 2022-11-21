@@ -1,0 +1,43 @@
+package com.kotele.countdowntimer;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    TextView textView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        textView = findViewById(R.id.textView);
+        new CountDownTimer(10000,1000){
+
+            //OnTick : Her 1 saniyede 1 yapılması gereken metod.
+            @Override
+            public void onTick(long l) {
+                textView.setText("Left: " + l / 1000);
+
+
+
+            }
+
+            //OnFinish :Süre bitince yapılması gereken metod.
+            @Override
+            public void onFinish() {
+                Toast.makeText(getApplicationContext(),"Done!",Toast.LENGTH_LONG).show();
+                textView.setText("Finished");
+
+            }
+        }.start();
+
+
+
+    }
+}

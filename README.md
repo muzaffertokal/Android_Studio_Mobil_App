@@ -30,6 +30,8 @@ StoringData: Veri kaydetme ve silme uygulaması.
 CountDownTimer: Sayaç ile geri sayım yapan ve uyarı mesajı veren uygulama.
 (An application that counts down with a counter and gives a warning message.)
 
+Runnable Handler: Kronometre uygulaması. (Stopwatch App.)
+
 
 
 
